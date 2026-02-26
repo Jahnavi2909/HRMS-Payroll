@@ -42,7 +42,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
-      - name: Who am I? (debug)
+      - name: Who am I?
         run: aws sts get-caller-identity || true
 
       - name: Deploy to S3
