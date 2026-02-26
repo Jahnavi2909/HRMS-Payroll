@@ -1,0 +1,98 @@
+/* ==========================================
+   CHART CARD STYLES
+========================================== */
+
+.chart-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.chart-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.chart-card .card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 1.25rem;
+  position: relative;
+}
+
+.chart-card .card-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.chart-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.chart-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.chart-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-card .card-header {
+    font-size: 0.9rem;
+    padding: 0.875rem 1rem;
+  }
+  
+  .chart-icon {
+    font-size: 1rem;
+  }
+  
+  .chart-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.625rem;
+  }
+  
+  .chart-card .card-body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .chart-card .card-header {
+    font-size: 0.85rem;
+    padding: 0.75rem 0.875rem;
+  }
+  
+  .chart-icon {
+    font-size: 0.9rem;
+  }
+  
+  .chart-badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
