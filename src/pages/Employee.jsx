@@ -279,7 +279,7 @@ const Employee = () => {
                       <div className="mobile-avatar">
                         {emp.avatar ? (
                           <img
-                            src={emp.avatar.startsWith('http') ? emp.avatar : `http://localhost:8080${emp.avatar}`}
+                            src={emp.avatar.startsWith('http') ? emp.avatar : `https://d7nbfoifh27pf.cloudfront.net${emp.avatar}`}
                             alt={emp.firstName}
                             className="mobile-avatar-img"
                             onError={(e) => {
