@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 export const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "https://d7nbfoifh27pf.cloudfront.net";
+  process.env.REACT_APP_API_BASE_URL || "http://localhost:8080";
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
